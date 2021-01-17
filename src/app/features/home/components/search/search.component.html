@@ -1,0 +1,11 @@
+<input
+  class="search-input"
+  [formControl]="searchControl"
+  [placeholder]="placeholder"
+>
+<div class="list">
+  <div
+    [routerLink]="['detail', item.id]"
+    *ngFor="let item of list"
+  >{{ item.name }}</div>
+</div>

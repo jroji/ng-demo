@@ -1,0 +1,16 @@
+:host {
+  --footer-background-color: var(--black, #000000);
+  --footer-text-color: var(--white, #ffffff);
+  --footer-radius: 20px;
+  --footer-spacing: var(--spacing, 16px);
+  --foter-margin: 0 20px;
+}
+
+.footer-container {
+  background: var(--footer-background-color);
+  border-top-left-radius: var(--footer-radius);
+  border-top-right-radius: var(--footer-radius);
+  color: var(--footer-text-color);
+  padding: var(--footer-spacing);
+  margin: var(--foter-margin);
+}

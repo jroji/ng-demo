@@ -1,0 +1,8 @@
+<label>{{ name }}: </label>
+<div class="bars">
+  <div
+    *ngFor="let rating of maxRate; let i = index"
+    class="bar"
+    [ngClass]="{'active': i < rate }"
+  ></div>
+</div>

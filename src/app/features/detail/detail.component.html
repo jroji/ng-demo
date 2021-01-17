@@ -1,0 +1,16 @@
+<ev-portrait [image]="image"></ev-portrait>
+<div>
+  <h1>
+    {{ breed?.name }}
+  </h1>
+  <p>{{ breed?.description }}</p>
+  <p><strong>Temperament: </strong>{{ breed?.temperament }}</p>
+  <p><strong>Origin: </strong>{{ breed?.origin }}</p>
+
+  <ev-rating [rate]="breed?.adaptability" name="Adaptability"></ev-rating>
+  <ev-rating [rate]="breed?.affection_level" name="Affection"></ev-rating>
+  <ev-rating [rate]="breed?.child_friendly" name="Child friendly"></ev-rating>
+  <ev-rating [rate]="breed?.social_needs" name="Social needs"></ev-rating>
+  <ev-rating [rate]="breed?.intelligence" name="Intelligence"></ev-rating>
+  <ev-rating [rate]="breed?.cat_friendly" name="Cat friendly"></ev-rating>
+</div>

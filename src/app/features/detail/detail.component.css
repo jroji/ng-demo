@@ -1,0 +1,16 @@
+:host {
+  display: flex;
+  min-height: 85vh;
+}
+
+ev-portrait {
+  margin-right: 16px;
+}
+
+ev-rating {
+  margin-bottom: 16px;
+}
+
+p {
+  margin: 32px 0;
+}
