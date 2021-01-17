@@ -1,0 +1,24 @@
+<main class="main">
+  <div class="main-header">
+    <img alt="logo" src="/assets/images/CatwikiLogo-white.svg">
+    <p>Get to know more about your cat breed</p>
+    <ev-search
+      placeholder="Search..."
+      [list]="searchedBreeds"
+      (searched)="search($event)">
+    </ev-search>
+  </div>
+  <div class="main-content">
+    <p class="main-title">Most Searched Breeds</p>
+    <h3>66+ Breeds For you to discover</h3>
+
+    <section class="main-breeds">
+      <ev-portrait
+        [routerLink]="['detail', breed?.id]"
+        *ngFor="let breed of (breeds$ | async)"
+        [image]="breed?.image?.url"
+        [name]="breed?.name"
+      ></ev-portrait>
+    </section>
+  </div>
+</main>

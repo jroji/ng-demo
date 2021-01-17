@@ -1,0 +1,27 @@
+:host {
+  --rating-bar-active-background: #544439;
+  --rating-bar-background: #E0E0E0;
+
+  display: flex;
+  justify-content: space-between;
+}
+.bars {
+  display: flex;
+}
+
+.bar {
+  width: 50px;
+  height: 12px;
+  background: var(--rating-bar-background);
+  background-color: ;
+  border-radius: 10px;
+  margin-right: 6px;
+}
+
+.bar.active {
+  background: var(--rating-bar-active-background);
+}
+
+label {
+  font-weight: bold;
+}
