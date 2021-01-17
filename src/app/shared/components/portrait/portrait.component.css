@@ -1,0 +1,10 @@
+:host {
+  --portrait-size: 200px;
+}
+
+img {
+  width: var(--portrait-size);
+  height: var(--portrait-size);
+  border-radius: 25px;
+  object-fit: cover;
+}

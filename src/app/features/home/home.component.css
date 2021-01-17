@@ -1,0 +1,49 @@
+:host {
+  --home-main-radius: 20px;
+  --home-main-margin: 0 20px;
+  --home-content-background: var(--primary-color, #E3E1DC);
+  min-height: 85vh;
+  display: block;
+}
+
+.main-header {
+  background: var(--black, #000000);
+  color: var(--white, #ffffff);
+  border-top-left-radius: var(--home-main-radius);
+  border-top-right-radius: var(--home-main-radius);
+  padding: var(--spacing, 16px);
+}
+
+.main-content {
+  background: var(--home-content-background, #ffffff);
+  border-bottom-left-radius: var(--home-main-radius);
+  border-bottom-right-radius: var(--home-main-radius);
+  padding: var(--spacing, 16px);
+}
+
+.main-title {
+  margin: 0 0 8px 0;
+  padding: 8px 0;
+  position: relative;
+}
+
+.main-title:after {
+  content: '';
+  width: 50px;
+  height: 2px;
+  background: black;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.main-breeds {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+ev-portrait {
+  cursor: pointer;
+  margin: var(--spacing, 16px);
+}
