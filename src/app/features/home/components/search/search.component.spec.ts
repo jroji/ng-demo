@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ReactiveFormsModule } from '@angular/forms';
 
 import { SearchComponent } from './search.component';
 
@@ -8,18 +9,25 @@ describe('SearchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
+      imports: [ ReactiveFormsModule ],
       declarations: [ SearchComponent ]
-    })
-    .compileComponents();
-  }));
+    });
+    TestBed.compileComponents();
 
-  beforeEach(() => {
     fixture = TestBed.createComponent(SearchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
-  });
+  }));
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
+  it('should emit values', async (done) => {
+    const component = fixture.debugElement;
+    fixture.componentInstance.searched.subscribe((value) => {
+      expect(value).toBe('Mu');
+      done();
+    });
+    const input = component.nativeElement.querySelector('input');
+    input.value = 'Mu';
+    input.dispatchEvent(new Event('input'));
+    fixture.detectChanges();
   });
 });

@@ -14,7 +14,7 @@ import { debounceTime, map } from 'rxjs/operators';
 export class HomeComponent implements OnInit {
 
   public breeds$: Observable<Breed[]>;
-  public searchedBreeds: Breed[] = [];
+  public searchedBreeds: Breed[];
 
   constructor(
     private store: Store<{ breeds: Breed[] }>,
